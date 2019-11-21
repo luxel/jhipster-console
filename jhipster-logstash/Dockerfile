@@ -9,5 +9,7 @@ ENV ELASTICSEARCH_HOST=jhipster-elasticsearch \
     INPUT_UDP_PORT=5000 \
     INPUT_HTTP_PORT=5001 \
     LOGSTASH_DEBUG=false
+    
+RUN chown logstash /usr/share/logstash/config/logstash.yml
 
 CMD logstash -f /usr/share/logstash/pipeline/logstash.conf
